@@ -10,6 +10,11 @@
 		6AC8D34172516D634408F8B8 /* Pods_movies_moviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5D82A7CCB3F6265845A143 /* Pods_movies_moviesUITests.framework */; };
 		708539EB24A387F74208E43C /* Pods_movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D1FB5156C3D6E48A87F398 /* Pods_movies.framework */; };
 		D208B17C33FC7F7333D47B07 /* Pods_moviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA851A5E48F6A9B94989277 /* Pods_moviesTests.framework */; };
+		F10AF63E249586C8003B4232 /* MovieDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10AF63D249586C8003B4232 /* MovieDetailCollectionViewCell.swift */; };
+		F10AF640249587B0003B4232 /* FlickrApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10AF63F249587B0003B4232 /* FlickrApiManager.swift */; };
+		F10AF6422495883E003B4232 /* FlickrPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10AF6412495883E003B4232 /* FlickrPicture.swift */; };
+		F10AF64424958858003B4232 /* FlickrPictureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10AF64324958858003B4232 /* FlickrPictureContainer.swift */; };
+		F10AF64624958871003B4232 /* FlickrWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10AF64524958871003B4232 /* FlickrWrapper.swift */; };
 		F1A937F92495468B000F703E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A937F82495468B000F703E /* AppDelegate.swift */; };
 		F1A937FB2495468B000F703E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A937FA2495468B000F703E /* SceneDelegate.swift */; };
 		F1A938002495468B000F703E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A937FE2495468B000F703E /* Main.storyboard */; };
@@ -71,6 +76,11 @@
 		75D1FB5156C3D6E48A87F398 /* Pods_movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E95FDE86B34E120CE05E22C /* Pods-moviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviesTests.release.xcconfig"; path = "Target Support Files/Pods-moviesTests/Pods-moviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B5D82A7CCB3F6265845A143 /* Pods_movies_moviesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movies_moviesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10AF63D249586C8003B4232 /* MovieDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		F10AF63F249587B0003B4232 /* FlickrApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrApiManager.swift; sourceTree = "<group>"; };
+		F10AF6412495883E003B4232 /* FlickrPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPicture.swift; sourceTree = "<group>"; };
+		F10AF64324958858003B4232 /* FlickrPictureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPictureContainer.swift; sourceTree = "<group>"; };
+		F10AF64524958871003B4232 /* FlickrWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrWrapper.swift; sourceTree = "<group>"; };
 		F1A937F52495468B000F703E /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A937F82495468B000F703E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A937FA2495468B000F703E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -388,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A9385D249550F8000F703E /* MovieDetailViewController.swift */,
+				F10AF63D249586C8003B4232 /* MovieDetailCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +479,9 @@
 			isa = PBXGroup;
 			children = (
 				F1A9387124955B01000F703E /* Movie.swift */,
+				F10AF6412495883E003B4232 /* FlickrPicture.swift */,
+				F10AF64324958858003B4232 /* FlickrPictureContainer.swift */,
+				F10AF64524958871003B4232 /* FlickrWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -476,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A9387424955BE4000F703E /* moviesApiManager.swift */,
+				F10AF63F249587B0003B4232 /* FlickrApiManager.swift */,
 			);
 			path = "API Managers";
 			sourceTree = "<group>";
@@ -751,16 +766,21 @@
 			files = (
 				F1A938542495507B000F703E /* MoviesListViewController.swift in Sources */,
 				F1A937F92495468B000F703E /* AppDelegate.swift in Sources */,
+				F10AF64624958871003B4232 /* FlickrWrapper.swift in Sources */,
 				F1A9384C24954FDE000F703E /* SplashPresenter.swift in Sources */,
 				F1A93858249550A0000F703E /* MoviesListInteractor.swift in Sources */,
 				F1A9384624954F61000F703E /* SplitWireframe.swift in Sources */,
+				F10AF6422495883E003B4232 /* FlickrPicture.swift in Sources */,
 				F1A9387A24956306000F703E /* MovieTableViewCell.swift in Sources */,
 				F1A9385C249550C4000F703E /* MoviesListProtocols.swift in Sources */,
 				F1A9385224955019000F703E /* SplashWireframe.swift in Sources */,
+				F10AF63E249586C8003B4232 /* MovieDetailCollectionViewCell.swift in Sources */,
 				F1A937FB2495468B000F703E /* SceneDelegate.swift in Sources */,
+				F10AF64424958858003B4232 /* FlickrPictureContainer.swift in Sources */,
 				F1A9386924955460000F703E /* R.generated.swift in Sources */,
 				F1A9385024955005000F703E /* SplashProtocol.swift in Sources */,
 				F1A9384A24954FC6000F703E /* SplashViewController.swift in Sources */,
+				F10AF640249587B0003B4232 /* FlickrApiManager.swift in Sources */,
 				F1A9386424955126000F703E /* MovieDetailWireframe.swift in Sources */,
 				F1A9384824954F99000F703E /* SplitProtocols.swift in Sources */,
 				F1A9386024955107000F703E /* MovieDetailPresenter.swift in Sources */,
