@@ -91,7 +91,6 @@ class MovieDetailViewController: UIViewController {
 extension MovieDetailViewController: MovieDetailViewProtocol{
     ///loads photos from movie name
     func loadPhotosUrls(urls: [String]) {
-        print(urls)
         self.spinner.stopAnimating()
         self.photos = urls
         self.collectionView.reloadData()

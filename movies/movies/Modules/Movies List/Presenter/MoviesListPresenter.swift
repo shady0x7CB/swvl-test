@@ -14,9 +14,7 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
     var wireframe: MoviesListWireframeProtocol?
     
     var movies: [Movie] = []
-    
-    var filteredMovies: [Movie] = []
-    
+        
     var dictionary: [YearKey: [Movie]] = [:]{
         didSet{
             self.sections = self.dictionary.keys.sorted(by: {$0.value > $1.value})
@@ -25,13 +23,16 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
     
     var sections: [YearKey] = []
     
-    init(view: MoviesListViewProtocol, interactor: MoviesListInteractorProtocol, wireframe: MoviesListWireframeProtocol) {
+    init(view: MoviesListViewProtocol, interactor: MoviesListInteractorProtocol, wireframe: MoviesListWireframeProtocol, movies: [Movie]) {
         self.view = view
         self.interactor = interactor
         self.wireframe = wireframe
+        self.movies = movies
     }
     
-    init() {}
+    init(movies: [Movie]) {
+        self.movies = movies
+    }
     
     ///get movie from categorized list by year
     func getMovie(section: Int, index: Int) -> Movie?{
@@ -54,9 +55,8 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
     
     ///initialize view controller with all movies
     func viewWillAppear() {
-        self.filteredMovies = self.movies
         self.dictionary = [:]
-        dictionary[YearKey.all] = filteredMovies
+        dictionary[YearKey.all] = movies
         self.view?.reload()
     }
     
@@ -93,15 +93,15 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
         return nil
     }
     
-    ///returns all movies contains search text
+    ///this function check if movies list contains search text and categorize filtered movies by year
     func search(searchTxt: String) {
+        var filteredMovies: [Movie] = movies
         if searchTxt.count > 0{
             filteredMovies = movies.filter({ (movie) -> Bool in
-                return movie.title.contains(searchTxt)
+                return movie.title.contains(searchTxt) || movie.cast.filter({$0.contains(searchTxt)}).count > 0
             })
-            self.dictionary = categorizeListByYear(movies: self.filteredMovies)
+            self.dictionary = categorizeListByYear(movies: filteredMovies)
         }else{
-            filteredMovies = movies
             dictionary = [:]
             dictionary[YearKey.all] = filteredMovies
         }
@@ -111,7 +111,7 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
     ///returns a categorized lists by year
     func categorizeListByYear(movies: [Movie]) -> [YearKey: [Movie]]{
         var categorizedList: [YearKey: [Movie]] = [:]
-        for movie in self.filteredMovies{
+        for movie in movies{
             if let _ = categorizedList[YearKey.year(movie.year)]{
                 categorizedList[YearKey.year(movie.year)]?.append(movie)
             }else{

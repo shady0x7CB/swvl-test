@@ -14,10 +14,9 @@ class MoviesListWireframe{
     class func setupModule(movies: [Movie]) -> UINavigationController {
         if let moduleViewController = R.storyboard.movie.moviesListViewController(){
             let interactor = MoviesListInteractor()
-            let presenter = MoviesListPresenter(view: moduleViewController, interactor: interactor, wireframe: MoviesListWireframe())
+            let presenter = MoviesListPresenter(view: moduleViewController, interactor: interactor, wireframe: MoviesListWireframe(), movies: movies)
             moduleViewController.presenter = presenter
             interactor.presenter = presenter
-            presenter.movies = movies
             let navigationController = UINavigationController(rootViewController: moduleViewController)
             navigationController.isNavigationBarHidden = true
             navigationController.restorationIdentifier = "movieList"
