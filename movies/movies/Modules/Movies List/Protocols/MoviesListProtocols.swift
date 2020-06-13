@@ -27,6 +27,7 @@ protocol MoviesListPresenterProtocol: class {
     func getMoviesCount(section: Int) -> Int
     func viewWillAppear()
     func search(searchTxt: String)
+    func presentDetail(section: Int, index: Int)
     func getSectionsCount() -> Int
     func getSections() -> [YearKey]
     func getSection(index: Int) -> Int?
@@ -43,5 +44,5 @@ protocol MoviesListViewProtocol: class {
 }
 
 protocol MoviesListWireframeProtocol: class {
-    
+    func presentDetail(fromView: UIViewController, movie: Movie)
 }

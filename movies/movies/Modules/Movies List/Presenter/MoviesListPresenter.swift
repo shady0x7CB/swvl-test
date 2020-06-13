@@ -60,7 +60,12 @@ class MoviesListPresenter: MoviesListPresenterProtocol{
         self.view?.reload()
     }
     
-    
+    ///go to detail view with selected movie
+    func presentDetail(section: Int, index: Int) {
+        if let movie = self.getMovie(section: section, index: index){
+            self.wireframe?.presentDetail(fromView: self.view as! MoviesListViewController, movie: movie)
+        }
+    }
     
     /// get number of categories
     func getSectionsCount() -> Int {

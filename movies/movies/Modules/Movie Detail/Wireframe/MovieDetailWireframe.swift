@@ -11,10 +11,10 @@ import UIKit
 class MovieDetailWireframe{
     
     ///create movie detail controller
-    class func setupModule() -> UINavigationController {
+    class func setupModule(movie: Movie?) -> UINavigationController {
         if let moduleViewController = R.storyboard.movie.movieDetailViewController(){
             let interactor = MovieDetailInteractor()
-            let presenter = MovieDetailPresenter(view: moduleViewController, interactor: interactor, wireframe: MovieDetailWireframe())
+            let presenter = MovieDetailPresenter(view: moduleViewController, interactor: interactor, wireframe: MovieDetailWireframe(), movie: movie)
             moduleViewController.presenter = presenter
             interactor.presenter = presenter
             

@@ -28,4 +28,23 @@ class MoviesListWireframe{
     }
         
 }
-extension MoviesListWireframe: MoviesListWireframeProtocol{}
+extension MoviesListWireframe: MoviesListWireframeProtocol{
+    
+    ///present or update detail controller with movie
+    func presentDetail(fromView: UIViewController, movie: Movie) {
+        let detailController = MovieDetailWireframe.setupModule(movie: movie)
+        if let splitController = (fromView.parent?.parent as? SplitViewController){
+            if splitController.viewControllers.count > 1{
+                //if the both master and detail views are visible (i-pad)
+                splitController.viewControllers = [splitController.viewControllers.first!, detailController]
+            }
+            else{
+                //if only master detail is presented push detail controller
+                if let nav = fromView.navigationController{
+                    nav.pushViewController(detailController, animated: true)
+                }
+            }
+        }
+    }
+    
+}

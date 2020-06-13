@@ -13,7 +13,7 @@ class SplitWireframe{
     class func buildSplitVc(movies: [Movie]) -> SplitViewController {
         
         let masterViewController = MoviesListWireframe.setupModule(movies: movies)
-        let detailViewController = MovieDetailWireframe.setupModule()
+        let detailViewController = MovieDetailWireframe.setupModule(movie: nil)
         
         let navigationControllers: [UINavigationController] = [masterViewController, detailViewController]
         

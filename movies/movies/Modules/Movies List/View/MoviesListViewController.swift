@@ -64,6 +64,11 @@ extension MoviesListViewController: UITableViewDataSource{
 
 extension MoviesListViewController: UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //go to detail view when clicking on the movie cell
+        self.presenter?.presentDetail(section: 0, index: indexPath.row)
+    }
+    
 }
 
 extension MoviesListViewController: UISearchBarDelegate{

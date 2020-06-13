@@ -12,10 +12,12 @@ class MovieDetailPresenter: MovieDetailPresenterProtocol{
     weak var view: MovieDetailViewProtocol?
     var interactor: MovieDetailInteractorProtocol?
     var wireframe: MovieDetailWireframeProtocol?
+    var movie: Movie?
     
-    init(view: MovieDetailViewProtocol, interactor: MovieDetailInteractorProtocol, wireframe: MovieDetailWireframeProtocol) {
+    init(view: MovieDetailViewProtocol, interactor: MovieDetailInteractorProtocol, wireframe: MovieDetailWireframeProtocol, movie: Movie?) {
         self.view = view
         self.interactor = interactor
         self.wireframe = wireframe
+        self.movie = movie
     }
 }
