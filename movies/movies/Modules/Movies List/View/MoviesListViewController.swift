@@ -17,7 +17,13 @@ class MoviesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupSearchBar()
         self.presenter?.viewWillAppear()
+    }
+    
+    private func setupSearchBar(){
+        self.searchBar.searchTextField.backgroundColor = UIColor.white
+        self.searchBar.delegate = self
     }
 
 }
@@ -60,3 +66,10 @@ extension MoviesListViewController: UITableViewDelegate{
     
 }
 
+extension MoviesListViewController: UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.presenter?.search(searchTxt: searchText)
+    }
+    
+}
