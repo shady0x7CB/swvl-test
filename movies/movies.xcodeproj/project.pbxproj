@@ -41,6 +41,7 @@
 		F1A9387224955B01000F703E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9387124955B01000F703E /* Movie.swift */; };
 		F1A9387524955BE4000F703E /* moviesApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9387424955BE4000F703E /* moviesApiManager.swift */; };
 		F1A9387824955C1A000F703E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9387724955C1A000F703E /* AppConstants.swift */; };
+		F1A9387A24956306000F703E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9387924956306000F703E /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		F1A9387124955B01000F703E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F1A9387424955BE4000F703E /* moviesApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesApiManager.swift; sourceTree = "<group>"; };
 		F1A9387724955C1A000F703E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F1A9387924956306000F703E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A938532495507B000F703E /* MoviesListViewController.swift */,
+				F1A9387924956306000F703E /* MovieTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				F1A9384C24954FDE000F703E /* SplashPresenter.swift in Sources */,
 				F1A93858249550A0000F703E /* MoviesListInteractor.swift in Sources */,
 				F1A9384624954F61000F703E /* SplitWireframe.swift in Sources */,
+				F1A9387A24956306000F703E /* MovieTableViewCell.swift in Sources */,
 				F1A9385C249550C4000F703E /* MoviesListProtocols.swift in Sources */,
 				F1A9385224955019000F703E /* SplashWireframe.swift in Sources */,
 				F1A937FB2495468B000F703E /* SceneDelegate.swift in Sources */,

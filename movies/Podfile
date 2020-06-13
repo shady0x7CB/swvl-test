@@ -8,6 +8,7 @@ target 'movies' do
   # Pods for movies
   pod 'R.swift'
   pod 'SDWebImage'
+  pod 'Cosmos', '~> 22.1'
   target 'moviesTests' do
     inherit! :search_paths
     # Pods for testing

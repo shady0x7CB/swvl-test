@@ -17,7 +17,7 @@ class MoviesListWireframe{
             let presenter = MoviesListPresenter(view: moduleViewController, interactor: interactor, wireframe: MoviesListWireframe())
             moduleViewController.presenter = presenter
             interactor.presenter = presenter
-            
+            presenter.movies = movies
             let navigationController = UINavigationController(rootViewController: moduleViewController)
             navigationController.isNavigationBarHidden = true
             navigationController.restorationIdentifier = "movieList"
