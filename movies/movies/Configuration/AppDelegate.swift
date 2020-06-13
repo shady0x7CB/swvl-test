@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupAppStartScreen()
         return true
+    }
+    
+    func setupAppStartScreen () {
+        let controller = SplashWireframe.setupModule()
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = controller
+            window.makeKeyAndVisible()
+        }
     }
 
     // MARK: UISceneSession Lifecycle

@@ -14,8 +14,11 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //delay splash screen for 1 second
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            //load movies from local file
+            self.presenter?.loadMoviesData()
+        }
     }
 
 }

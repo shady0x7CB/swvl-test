@@ -10,9 +10,9 @@ import UIKit
 
 class SplitWireframe{
     
-    class func buildSplitVc() -> SplitViewController {
+    class func buildSplitVc(movies: [Movie]) -> SplitViewController {
         
-        let masterViewController = MoviesListWireframe.setupModule()
+        let masterViewController = MoviesListWireframe.setupModule(movies: movies)
         let detailViewController = MovieDetailWireframe.setupModule()
         
         let navigationControllers: [UINavigationController] = [masterViewController, detailViewController]

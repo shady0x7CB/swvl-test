@@ -21,4 +21,14 @@ class SplashPresenter: SplashPresenterProtocol{
         self.wireframe = wireframe
     }
     
+    ///load movies from local file
+    func loadMoviesData() {
+        interactor?.loadMoviesData()
+    }
+    
+    ///go to movies list after loading movies from file
+    func presentMoviesList(movies: [Movie]) {
+        self.wireframe?.presentMoviesList(movies: movies)
+    }
+    
 }

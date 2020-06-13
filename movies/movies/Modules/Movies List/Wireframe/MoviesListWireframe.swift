@@ -11,7 +11,7 @@ import UIKit
 class MoviesListWireframe{
     
     //MARK: - Initiation
-    class func setupModule() -> UINavigationController {
+    class func setupModule(movies: [Movie]) -> UINavigationController {
         if let moduleViewController = R.storyboard.movie.moviesListViewController(){
             let interactor = MoviesListInteractor()
             let presenter = MoviesListPresenter(view: moduleViewController, interactor: interactor, wireframe: MoviesListWireframe())
