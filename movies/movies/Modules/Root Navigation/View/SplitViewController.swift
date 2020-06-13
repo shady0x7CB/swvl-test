@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplitViewController.swift
 //  movies
 //
 //  Created by Shady Abdelaziz on 6/13/20.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SplitViewController: UISplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
 }
-
