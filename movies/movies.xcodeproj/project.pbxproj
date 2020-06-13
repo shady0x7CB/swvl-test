@@ -36,6 +36,8 @@
 		F1A9386424955126000F703E /* MovieDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386324955126000F703E /* MovieDetailWireframe.swift */; };
 		F1A9386624955135000F703E /* MovieDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386524955135000F703E /* MovieDetailProtocols.swift */; };
 		F1A9386924955460000F703E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386824955460000F703E /* R.generated.swift */; };
+		F1A9386B24955545000F703E /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A9386A24955545000F703E /* Movie.storyboard */; };
+		F1A9386E24955A21000F703E /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = F1A9386D24955A21000F703E /* movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		F1A9386324955126000F703E /* MovieDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailWireframe.swift; sourceTree = "<group>"; };
 		F1A9386524955135000F703E /* MovieDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocols.swift; sourceTree = "<group>"; };
 		F1A9386824955460000F703E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F1A9386A24955545000F703E /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		F1A9386D24955A21000F703E /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		F1A937F72495468B000F703E /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				F1A9386C249559FA000F703E /* Local Data */,
 				F1A9382A24954C04000F703E /* Modules */,
 				F1A9382824954BDE000F703E /* Configuration */,
 				F1A9382924954BF5000F703E /* Storyboards */,
@@ -216,6 +221,7 @@
 			children = (
 				F1A937FE2495468B000F703E /* Main.storyboard */,
 				F1A938032495468C000F703E /* LaunchScreen.storyboard */,
+				F1A9386A24955545000F703E /* Movie.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -430,6 +436,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		F1A9386C249559FA000F703E /* Local Data */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9386D24955A21000F703E /* movies.json */,
+			);
+			path = "Local Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -542,7 +556,9 @@
 			files = (
 				F1A938052495468C000F703E /* LaunchScreen.storyboard in Resources */,
 				F1A938022495468C000F703E /* Assets.xcassets in Resources */,
+				F1A9386E24955A21000F703E /* movies.json in Resources */,
 				F1A938002495468B000F703E /* Main.storyboard in Resources */,
+				F1A9386B24955545000F703E /* Movie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

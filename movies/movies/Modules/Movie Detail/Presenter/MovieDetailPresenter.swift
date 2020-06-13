@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class MovieDetailPresenter: MovieDetailPresenterProtocol{
+    weak var view: MovieDetailViewProtocol?
+    var interactor: MovieDetailInteractorProtocol?
+    var wireframe: MovieDetailWireframeProtocol?
+    
+    init(view: MovieDetailViewProtocol, interactor: MovieDetailInteractorProtocol, wireframe: MovieDetailWireframeProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.wireframe = wireframe
+    }
+}

@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+protocol SplashPresenterProtocol: class {
+    
+}
+
+protocol SplashInteractorProtocol: class {
+
+}
+
+protocol SplashViewProtocol: class {
+    
+}
+
+protocol SplashWireframeProtocol: class {
+
+}

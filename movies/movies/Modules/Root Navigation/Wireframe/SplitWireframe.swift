@@ -6,4 +6,22 @@
 //  Copyright © 2020 SWVL. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SplitWireframe{
+    
+    class func buildSplitVc() -> SplitViewController {
+        
+        let masterViewController = MoviesListWireframe.setupModule()
+        let detailViewController = MovieDetailWireframe.setupModule()
+        
+        let navigationControllers: [UINavigationController] = [masterViewController, detailViewController]
+        
+        if let splitViewController = R.storyboard.main.splitViewController(){
+            splitViewController.viewControllers = navigationControllers
+            splitViewController.preferredDisplayMode = .allVisible
+            return splitViewController
+        }
+        return SplitViewController()
+    }
+}

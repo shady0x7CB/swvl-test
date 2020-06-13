@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class MovieDetailInteractor: MovieDetailInteractorProtocol{
+    weak var presenter: MovieDetailPresenterProtocol?
+    
+}

@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class SplashPresenter: SplashPresenterProtocol{
+    
+    weak var view: SplashViewProtocol?
+    var interactor: SplashInteractorProtocol?
+    var wireframe: SplashWireframeProtocol?
+    
+    
+    init(view: SplashViewProtocol, interactor: SplashInteractorProtocol, wireframe: SplashWireframeProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.wireframe = wireframe
+    }
+    
+}

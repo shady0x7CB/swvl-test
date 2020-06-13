@@ -6,4 +6,20 @@
 //  Copyright © 2020 SWVL. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol MoviesListPresenterProtocol: class {
+
+}
+
+protocol MoviesListInteractorProtocol: class {
+    
+}
+
+protocol MoviesListViewProtocol: class {
+
+}
+
+protocol MoviesListWireframeProtocol: class {
+
+}

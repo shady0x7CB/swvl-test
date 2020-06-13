@@ -6,4 +6,8 @@
 //  Copyright © 2020 SWVL. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol SplitViewModule {
+    func splitViewControllerModule() -> UINavigationController
+}
