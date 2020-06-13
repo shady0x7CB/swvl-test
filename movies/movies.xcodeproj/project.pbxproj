@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,7 @@
 		F1A9386224955116000F703E /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386124955116000F703E /* MovieDetailInteractor.swift */; };
 		F1A9386424955126000F703E /* MovieDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386324955126000F703E /* MovieDetailWireframe.swift */; };
 		F1A9386624955135000F703E /* MovieDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386524955135000F703E /* MovieDetailProtocols.swift */; };
+		F1A9386924955460000F703E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9386824955460000F703E /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F1A9386124955116000F703E /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		F1A9386324955126000F703E /* MovieDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailWireframe.swift; sourceTree = "<group>"; };
 		F1A9386524955135000F703E /* MovieDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocols.swift; sourceTree = "<group>"; };
+		F1A9386824955460000F703E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +147,6 @@
 				337CCE28E0390F712C68A8AF /* Pods-moviesTests.debug.xcconfig */,
 				7E95FDE86B34E120CE05E22C /* Pods-moviesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -233,6 +234,7 @@
 		F1A9382B24954C45000F703E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F1A9386824955460000F703E /* R.generated.swift */,
 				F1A938012495468C000F703E /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -436,6 +438,7 @@
 			buildConfigurationList = F1A9381F2495468C000F703E /* Build configuration list for PBXNativeTarget "movies" */;
 			buildPhases = (
 				719EE5D62BFDBE889FBC0D3B /* [CP] Check Pods Manifest.lock */,
+				F1A93867249553B5000F703E /* ShellScript */,
 				F1A937F12495468B000F703E /* Sources */,
 				F1A937F22495468B000F703E /* Frameworks */,
 				F1A937F32495468B000F703E /* Resources */,
@@ -643,6 +646,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F1A93867249553B5000F703E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		F4933EEFDFBB3E667E56FEB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,6 +697,7 @@
 				F1A9385C249550C4000F703E /* MoviesListProtocols.swift in Sources */,
 				F1A9385224955019000F703E /* SplashWireframe.swift in Sources */,
 				F1A937FB2495468B000F703E /* SceneDelegate.swift in Sources */,
+				F1A9386924955460000F703E /* R.generated.swift in Sources */,
 				F1A9385024955005000F703E /* SplashProtocol.swift in Sources */,
 				F1A9384A24954FC6000F703E /* SplashViewController.swift in Sources */,
 				F1A9386424955126000F703E /* MovieDetailWireframe.swift in Sources */,
