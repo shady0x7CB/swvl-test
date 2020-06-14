@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+protocol SplashPresenterProtocol: class {
+    func loadMoviesData()
+    func presentMoviesList(movies: [Movie])
+}
+
+protocol SplashInteractorProtocol: class {
+    func loadMoviesData()
+}
+
+protocol SplashViewProtocol: class {
+    
+}
+
+protocol SplashWireframeProtocol: class {
+    func presentMoviesList(movies: [Movie])
+}

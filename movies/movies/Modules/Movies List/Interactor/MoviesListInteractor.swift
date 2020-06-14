@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class MoviesListInteractor: MoviesListInteractorProtocol{
+    weak var presenter: MoviesListPresenterProtocol?
+}
