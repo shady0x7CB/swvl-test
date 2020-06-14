@@ -71,7 +71,7 @@ class MovieDetailViewController: UIViewController {
     
     ///setup collection view
     private func setupCollectionView(){
-        let cellSize = CGSize(width:self.containerView.bounds.width/2.5 , height:self.containerView.bounds.width/2.5)
+        let cellSize = CGSize(width:self.containerView.bounds.width/3 , height:self.containerView.bounds.width/3)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = cellSize
